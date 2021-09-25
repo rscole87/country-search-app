@@ -14,7 +14,10 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
           </li>
       )
   })
- 
+
+  const currencies = country.currencies.map(currency => currency.name).join(', ');
+  const languages = country.languages.map(language => language.name).join(', ');
+
   return (
     <>
       <section id="country-profile-section">
@@ -32,7 +35,21 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
         </div>
 
         <div>
-          <h4>Borders</h4>
+            <p><span>Native Name: </span> {country.nativeName}</p>
+            <p><span>Population: </span> {country.population}</p>
+            <p><span>Region: </span> {country.continent}</p>
+            <p><span>Sub Region: </span> {country.region}</p>
+            <p><span>Capital: </span> {country.capital}</p>
+        </div>
+        
+        <div>
+            <p><span>Top Level Domain: </span> {country.topLevelDomain[0]}</p>
+            <p><span>Currencies: </span> {currencies}</p>
+            <p><span>Languages: </span> {languages}</p>
+        </div>
+
+        <div>
+          <p>Border Countries: </p>
           <ul>{neighborLinks}</ul>
         </div>
       </section>
