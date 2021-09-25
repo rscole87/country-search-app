@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 const ResultsArea = (props) => {
     const countryCards = props.countries.map(country => {
         return (
-            <div key={country.alpha3code} onClick={() => {
-                console.log(country)
+            <div key={country.alpha3Code} onClick={() => {
                 props.setActiveCountry(country)
                 }}>
-                <Link to={`/countries/${country.alpha3code}`}>
+                <Link to={`/countries/${country.alpha3Code}`}>
                     <div>
                         <img className="flag-sm" src={country.flags[1]} alt="" />
                     </div>
