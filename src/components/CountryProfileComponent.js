@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
   console.log(country);
 
-  const neighbors = resultsList.filter((result) => country.borders.includes(result.alpha3Code));
+  const neighbors = resultsList.filter((result) => {
+    if (country.borders) {
+      return country.borders.includes(result.alpha3Code);
+    } 
+    return
+  });
   const neighborLinks = neighbors.map((neighbor) => {
     return (
       <Link to={`/countries/${neighbor.alpha3Code}`} onClick={() => setActiveCountry(neighbor)} key={neighbor.alpha3Code}>
