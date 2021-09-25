@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "./HeaderComponent";
-import SearchArea from "./SearchAreaComponent";
-import ResultsArea from "./ResultsAreaComponent";
+import LandingPage from "./LandingPageComponent";
+import CountryProfile from "./CountryProfileComponent";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 const Main = () => {
   const [searchString, setSearchString] = useState("");
@@ -21,16 +22,16 @@ const Main = () => {
   return (
     <>
       <Header />
-      <SearchArea searchString={searchString} setSearchString={setSearchString} setRegionFilter={setRegionFilter} />
-      <ResultsArea 
-        countries={
-          regionFilter === "All" ? 
-          resultsList.filter(country => country.name.toLowerCase().includes(searchString.toLowerCase()))
-          : resultsList.filter(country => country.continent === regionFilter).filter(country => country.name.toLowerCase().includes(searchString.toLowerCase()))
-          } 
-        activeCountry={activeCountry}
-        setActiveCountry={setActiveCountry}
-      />
+      <hr />
+      <Switch>
+        <Route exact path="/" render={() => <LandingPage searchString={searchString} setSearchString={setSearchString} regionFilter={regionFilter} setRegionFilter={setRegionFilter} resultsList={resultsList} setActiveCountry={setActiveCountry} />} />
+        <Route
+          path="/countries/:countryId"
+          render={() =>
+            <CountryProfile country={activeCountry} setActiveCountry={setActiveCountry} /> }
+        />
+        <Redirect to="/" />
+      </Switch>
     </>
   );
 };
