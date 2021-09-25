@@ -13,7 +13,7 @@ const SearchArea = (props) => {
           <div>
             <label htmlFor="region" hidden>Region:</label>
             <select name="region" id="region" onChange={(e) => props.setRegionFilter(e.target.value)}>
-              <option value="" disabled selected>Filter by Region</option>
+              <option value="" disabled defaultValue>Filter by Region</option>
               <option value="africa">Africa</option>
               <option value="america">America</option>
               <option value="asia">Asia</option>
