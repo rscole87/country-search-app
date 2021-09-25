@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
   console.log(country);
 
-  const neighbors = resultsList.filter(result => country.borders.includes(result.alpha3Code));
-  const neighborLinks = neighbors.map(neighbor => {
-      return (
-          <li>
-              <Link to={`/countries/${neighbor.alpha3Code}`} onClick={() => setActiveCountry(neighbor)}>
-                    {neighbor.name}
-              </Link>
-          </li>
-      )
-  })
+  const neighbors = resultsList.filter((result) => country.borders.includes(result.alpha3Code));
+  const neighborLinks = neighbors.map((neighbor) => {
+    return (
+      <Link to={`/countries/${neighbor.alpha3Code}`} onClick={() => setActiveCountry(neighbor)} key={neighbor.alpha3Code}>
+        <li>{neighbor.name}</li>
+      </Link>
+    );
+  });
 
-  const currencies = country.currencies.map(currency => currency.name).join(', ');
-  const languages = country.languages.map(language => language.name).join(', ');
+  const currencies = country.currencies.map((currency) => currency.name).join(", ");
+  const languages = country.languages.map((language) => language.name).join(", ");
 
   return (
     <>
@@ -35,17 +33,33 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
         </div>
 
         <div>
-            <p><span>Native Name: </span> {country.nativeName}</p>
-            <p><span>Population: </span> {country.population}</p>
-            <p><span>Region: </span> {country.continent}</p>
-            <p><span>Sub Region: </span> {country.region}</p>
-            <p><span>Capital: </span> {country.capital}</p>
+          <p>
+            <span className="data-label">Native Name: </span> {country.nativeName}
+          </p>
+          <p>
+            <span className="data-label">Population: </span> {country.population}
+          </p>
+          <p>
+            <span className="data-label">Region: </span> {country.continent}
+          </p>
+          <p>
+            <span className="data-label">Sub Region: </span> {country.region}
+          </p>
+          <p>
+            <span className="data-label">Capital: </span> {country.capital}
+          </p>
         </div>
-        
+
         <div>
-            <p><span>Top Level Domain: </span> {country.topLevelDomain[0]}</p>
-            <p><span>Currencies: </span> {currencies}</p>
-            <p><span>Languages: </span> {languages}</p>
+          <p>
+            <span className="data-label">Top Level Domain: </span> {country.topLevelDomain[0]}
+          </p>
+          <p>
+            <span className="data-label">Currencies: </span> {currencies}
+          </p>
+          <p>
+            <span className="data-label">Languages: </span> {languages}
+          </p>
         </div>
 
         <div>

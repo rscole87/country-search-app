@@ -1,4 +1,39 @@
+#results-section {
+  #results-display-div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-.flag-sm{
-    max-height: 125px;
+    a {
+      text-decoration: none;
+    }
+
+    .country-card {
+      height: 300px;
+      width: 250px;
+      border: 2px solid gray;
+      border-radius: 8px;
+      margin: 50px;
+
+      .flag-div-sm {
+        height: 50%;
+      }
+
+      .card-content-div {
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+
+        .country-card-heading {
+          font-size: 1rem;
+          margin: 0 0 5% 0;
+        }
+
+        p {
+          margin: 0 0 5% 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 }
