@@ -5,7 +5,7 @@ import ResultsArea from "./ResultsAreaComponent";
 
 const Main = () => {
   const [searchString, setSearchString] = useState("");
-  const [regionFilter, setRegionFilter] = useState(null);
+  const [regionFilter, setRegionFilter] = useState("All");
   const [resultsList, setResultsList] = useState([]);
   const [activeCountry, setActiveCountry] = useState(null);
 
@@ -13,7 +13,6 @@ const Main = () => {
     fetch("https://restcountries.com/v2/all")
       .then((results) => results.json())
       .then((results) => {
-        console.log(results);
         setResultsList(results);
       })
       .catch((err) => console.log(`Error occured: ${err}`));
@@ -23,7 +22,15 @@ const Main = () => {
     <>
       <Header />
       <SearchArea searchString={searchString} setSearchString={setSearchString} setRegionFilter={setRegionFilter} />
-      <ResultsArea countries={resultsList.filter(country => country.name.toLowerCase().includes(searchString.toLowerCase()))} regionFilter={regionFilter} />
+      <ResultsArea 
+        countries={
+          regionFilter === "All" ? 
+          resultsList.filter(country => country.name.toLowerCase().includes(searchString.toLowerCase()))
+          : resultsList.filter(country => country.continent === regionFilter).filter(country => country.name.toLowerCase().includes(searchString.toLowerCase()))
+          } 
+        activeCountry={activeCountry}
+        setActiveCountry={setActiveCountry}
+      />
     </>
   );
 };

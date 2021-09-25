@@ -1,9 +1,10 @@
 import React from 'react'
+import CountryProfile from './CountryProfileComponent'
 
-const ResultsArea = ({countries}) => {
-    const countryCards = countries.map(country => {
+const ResultsArea = (props) => {
+    const countryCards = props.countries.map(country => {
         return (
-            <div key={country.alpha3code}>
+            <div key={country.alpha3code} onClick={() => props.setActiveCountry(country)}>
                 <div>
                     <img className="flag-sm" src={country.flags[1]} alt="" />
                 </div>
@@ -16,7 +17,9 @@ const ResultsArea = ({countries}) => {
             </div>
         )
     })
-
+    if(props.activeCountry){
+        return <CountryProfile country={props.activeCountry} setActiveCountry={props.setActiveCountry}/>
+    }
     return (
         <>
             {countryCards}
