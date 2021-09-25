@@ -28,7 +28,7 @@ const Main = () => {
         <Route
           path="/countries/:countryId"
           render={() =>
-            <CountryProfile country={activeCountry} setActiveCountry={setActiveCountry} /> }
+            <CountryProfile country={activeCountry} setActiveCountry={setActiveCountry} resultsList={resultsList} /> }
         />
         <Redirect to="/" />
       </Switch>
