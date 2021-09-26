@@ -1,8 +1,69 @@
-
-hr{
+hr {
   height: 3px;
   background-color: rgba(185, 185, 185, 0.329);
   border: none;
+}
+
+#search-section {
+  background-color: rgb(245, 245, 245);
+
+  #search-inputs-div {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 575px) {
+      padding: 20px 50px;
+      flex-direction: column;
+    }
+
+    input {
+      min-width: 190px;
+      max-width: 80%;
+      border-radius: 5px;
+      border: hidden;
+      padding: 10px;
+      box-shadow: 2px 2px 15px 3px #00000007;
+      padding: 15px 25px;
+    }
+
+    #custom-select {
+      width: 200px;
+      box-shadow: 2px 2px 15px 3px #00000007;
+      cursor: pointer;
+
+      #custom-select-header {
+        font-size: 0.8rem;
+        padding: 15px 25px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      #custom-select-dropdown {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 200px;
+        margin-top: 3px;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: 300ms;
+        position: absolute;
+
+        div {
+          padding: 5px 25px;
+          .custom-select-dropdown-option {
+            font-size: 0.8rem;
+          }
+
+          &:hover {
+            background-color: rgba(145, 145, 145, 0.329);
+          }
+        }
+      }
+    }
+  }
 }
 
 #results-section {
@@ -12,12 +73,12 @@ hr{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
+
     a {
       text-decoration: none;
       color: rgb(54, 54, 54);
     }
-    
+
     .country-card {
       height: 315px;
       width: 250px;
@@ -48,7 +109,7 @@ hr{
         }
       }
 
-      &:hover{
+      &:hover {
         transform: scale(1.05);
       }
     }

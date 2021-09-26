@@ -5,7 +5,7 @@ import ResultsArea from "./ResultsAreaComponent";
 const LandingPage = (props) => {
   return (
     <>
-      <SearchArea searchString={props.searchString} setSearchString={props.setSearchString} setRegionFilter={props.setRegionFilter} />
+      <SearchArea searchString={props.searchString} setSearchString={props.setSearchString} regionFilter={props.regionFilter} setRegionFilter={props.setRegionFilter} />
       <ResultsArea 
               countries={props.regionFilter === "All" ? 
                 props.resultsList.filter((country) => country.name.toLowerCase().includes(props.searchString.toLowerCase())) 

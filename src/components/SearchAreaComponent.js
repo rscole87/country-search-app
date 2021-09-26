@@ -1,28 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SearchArea = (props) => {
-  
+  const [selectOpen, setSelectOpen] = useState(false);
+
+
   return (
     <>
       <section id="search-section">
-        <div>
+        <div id="search-inputs-div">
           <div>
             <input type="text" placeholder="Search for a country..." value={props.searchString} onChange={(e) => props.setSearchString(e.target.value)} />
           </div>
 
-          <div>
-            <label htmlFor="region" hidden>Region:</label>
-            <select name="region" id="region" onChange={(e) => {
-              props.setRegionFilter(e.target.value)}
-              }>
-              <option disabled defaultValue>Filter by Region</option>
-              <option value="All">All Regions</option>
-              <option value="Africa">Africa</option>
-              <option value="Americas">Americas</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europe</option>
-              <option value="Oceania">Oceania</option>
-            </select>
+          <div id="custom-select">
+            <div id="custom-select-header" onClick={() => setSelectOpen(!selectOpen)}>
+              <span>{props.regionFilter === "All" ? "Filter by Region" : props.regionFilter}</span>
+            </div>
+            <div id="custom-select-dropdown" style={selectOpen ? { height: "200px" } : { height: "0px" }}>
+              <div onClick={() => {
+                props.setRegionFilter("All")
+                setSelectOpen(false)
+              }}>
+                <span className="custom-select-dropdown-option">All Regions</span>
+              </div>
+
+              <div onClick={() => {
+                props.setRegionFilter("Africa")
+                setSelectOpen(false)
+              }}>
+                <span className="custom-select-dropdown-option">Africa</span>
+              </div>
+
+              <div onClick={() => {
+                props.setRegionFilter("Americas")
+                setSelectOpen(false)
+              }}>
+                <span className="custom-select-dropdown-option">Americas</span>
+              </div>
+
+              <div onClick={() => {
+                props.setRegionFilter("Asia")
+                setSelectOpen(false)
+              }}>
+                <span className="custom-select-dropdown-option">Asia</span>
+              </div>
+
+              <div onClick={() => {
+                props.setRegionFilter("Europe")
+                setSelectOpen(false)
+              }}>
+                <span className="custom-select-dropdown-option">Europe</span>
+              </div>
+
+              <div onClick={() => {
+                props.setRegionFilter("Oceania")
+                setSelectOpen(false)
+              }}>
+                <span className="custom-select-dropdown-option">Oceania</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
