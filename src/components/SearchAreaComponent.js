@@ -8,7 +8,7 @@ const SearchArea = (props) => {
     <>
       <section id="search-section">
         <div id="search-inputs-div" className="container">
-          <div>
+          <div id="search-box-div">
             <input type="text" placeholder="Search for a country..." value={props.searchString} onChange={(e) => props.setSearchString(e.target.value)} />
           </div>
 
