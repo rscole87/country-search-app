@@ -14,7 +14,7 @@ const ResultsArea = (props) => {
         <div id="results-header">
           <h2>{props.region === "All" ? "All Countries" : props.region}</h2>
         </div>
-        <div id="results-display-div">{countryCards}</div>
+        <div id="results-display-div" className="container">{countryCards}</div>
       </section>
     </>
   );

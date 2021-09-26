@@ -1,3 +1,8 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
 hr {
   height: 3px;
   background-color: rgba(185, 185, 185, 0.329);
@@ -83,12 +88,17 @@ hr {
 
   #results-display-div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 50px 25px;
 
     a {
       text-decoration: none;
       color: rgb(54, 54, 54);
+
+      @media only screen and (max-width: 575px) {
+        margin: 0 auto;
+      }
     }
 
     .country-card {
@@ -97,7 +107,7 @@ hr {
       background-color: white;
       box-shadow: 2px 2px 15px 3px #00000017;
       border-radius: 8px;
-      margin: 50px;
+      // margin: 0 50px;
       overflow: hidden;
       transition: 500ms;
 

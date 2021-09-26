@@ -1,3 +1,8 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
 hr {
   height: 3px;
   background-color: rgba(185, 185, 185, 0.329);
@@ -109,15 +114,23 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 50px 25px;
 }
 
 #results-section #results-display-div a {
   text-decoration: none;
   color: #363636;
+}
+
+@media only screen and (max-width: 575px) {
+  #results-section #results-display-div a {
+    margin: 0 auto;
+  }
 }
 
 #results-section #results-display-div .country-card {
@@ -127,7 +140,6 @@ hr {
   -webkit-box-shadow: 2px 2px 15px 3px #00000017;
           box-shadow: 2px 2px 15px 3px #00000017;
   border-radius: 8px;
-  margin: 50px;
   overflow: hidden;
   -webkit-transition: 500ms;
   transition: 500ms;

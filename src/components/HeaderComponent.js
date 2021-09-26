@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <>
             <section id="header-section">
-                <div>
+                <div className="container">
                     <h1>Country Search</h1>
                     <small>Enter a country name to find information specific to that location.</small>
                 </div>
