@@ -1,3 +1,7 @@
+#results-section {
+  background-color: whitesmoke;
+}
+
 #results-section #results-display-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,14 +14,18 @@
 
 #results-section #results-display-div a {
   text-decoration: none;
+  color: #363636;
 }
 
 #results-section #results-display-div .country-card {
-  height: 300px;
+  height: 315px;
   width: 250px;
-  border: 2px solid gray;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 15px 3px #00000017;
+          box-shadow: 2px 2px 15px 3px #00000017;
   border-radius: 8px;
   margin: 50px;
+  overflow: hidden;
 }
 
 #results-section #results-display-div .country-card .flag-div-sm {

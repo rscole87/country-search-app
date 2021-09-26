@@ -1,4 +1,6 @@
 #results-section {
+  background-color: rgb(245, 245, 245);
+
   #results-display-div {
     display: flex;
     justify-content: space-around;
@@ -6,14 +8,17 @@
 
     a {
       text-decoration: none;
+      color: rgb(54, 54, 54);
     }
 
     .country-card {
-      height: 300px;
+      height: 315px;
       width: 250px;
-      border: 2px solid gray;
+      background-color: white;
+      box-shadow: 2px 2px 15px 3px #00000017;
       border-radius: 8px;
       margin: 50px;
+      overflow: hidden;
 
       .flag-div-sm {
         height: 50%;
