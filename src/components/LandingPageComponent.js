@@ -7,6 +7,7 @@ const LandingPage = (props) => {
     <>
       <SearchArea searchString={props.searchString} setSearchString={props.setSearchString} regionFilter={props.regionFilter} setRegionFilter={props.setRegionFilter} />
       <ResultsArea 
+              region={props.regionFilter}
               countries={props.regionFilter === "All" ? 
                 props.resultsList.filter((country) => country.name.toLowerCase().includes(props.searchString.toLowerCase())) 
                 : props.resultsList.filter((country) => country.continent === props.regionFilter).filter((country) => country.name.toLowerCase().includes(props.searchString.toLowerCase()))} activeCountry={props.activeCountry} setActiveCountry={props.setActiveCountry} 

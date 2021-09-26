@@ -90,6 +90,21 @@ hr {
   background-color: whitesmoke;
 }
 
+#results-section #results-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#results-section #results-header h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+
 #results-section #results-display-div {
   display: -webkit-box;
   display: -ms-flexbox;

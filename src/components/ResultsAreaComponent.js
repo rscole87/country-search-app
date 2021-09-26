@@ -11,6 +11,9 @@ const ResultsArea = (props) => {
   return (
     <>
       <section id="results-section">
+        <div id="results-header">
+          <h2>{props.region === "All" ? "All Countries" : props.region}</h2>
+        </div>
         <div id="results-display-div">{countryCards}</div>
       </section>
     </>
