@@ -1,3 +1,9 @@
+hr {
+  height: 3px;
+  background-color: rgba(185, 185, 185, 0.329);
+  border: none;
+}
+
 #results-section {
   background-color: whitesmoke;
 }
@@ -26,6 +32,8 @@
   border-radius: 8px;
   margin: 50px;
   overflow: hidden;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 #results-section #results-display-div .country-card .flag-div-sm {
@@ -51,5 +59,10 @@
 #results-section #results-display-div .country-card .card-content-div p {
   margin: 0 0 5% 0;
   font-size: 0.8rem;
+}
+
+#results-section #results-display-div .country-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=App.css.map */

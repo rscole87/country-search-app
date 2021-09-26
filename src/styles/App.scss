@@ -1,3 +1,10 @@
+
+hr{
+  height: 3px;
+  background-color: rgba(185, 185, 185, 0.329);
+  border: none;
+}
+
 #results-section {
   background-color: rgb(245, 245, 245);
 
@@ -5,12 +12,12 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
+    
     a {
       text-decoration: none;
       color: rgb(54, 54, 54);
     }
-
+    
     .country-card {
       height: 315px;
       width: 250px;
@@ -19,6 +26,7 @@
       border-radius: 8px;
       margin: 50px;
       overflow: hidden;
+      transition: 500ms;
 
       .flag-div-sm {
         height: 50%;
@@ -38,6 +46,10 @@
           margin: 0 0 5% 0;
           font-size: 0.8rem;
         }
+      }
+
+      &:hover{
+        transform: scale(1.05);
       }
     }
   }
