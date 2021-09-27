@@ -9,12 +9,13 @@ const SearchArea = (props) => {
       <section id="search-section">
         <div id="search-inputs-div" className="container">
           <div id="search-box-div">
-            <input type="text" placeholder="Search for a country..." value={props.searchString} onChange={(e) => props.setSearchString(e.target.value)} />
+            <input type="text" placeholder="&#xF002;  Search for a country..." value={props.searchString} onChange={(e) => props.setSearchString(e.target.value)} />
           </div>
 
           <div id="custom-select">
             <div id="custom-select-header" onClick={() => setSelectOpen(!selectOpen)}>
-              <span>{props.regionFilter === "All" ? "Filter by Region" : props.regionFilter}</span>
+              <div><span>{props.regionFilter === "All" ? "Filter by Region" : props.regionFilter} </span></div>
+              <div><span>{selectOpen ? <i className="fa fa-chevron-up" /> : <i className="fa fa-chevron-down" />}</span></div>
             </div>
             <div id="custom-select-dropdown" style={selectOpen ? { height: "200px" } : { height: "0px" }}>
               <div onClick={() => {

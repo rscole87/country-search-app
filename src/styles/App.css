@@ -41,6 +41,7 @@ hr {
 }
 
 #search-section #search-inputs-div #search-box-div input {
+  font-family: 'Helvetica', FontAwesome, sans-serif;
   border-radius: 5px;
   border: hidden;
   -webkit-box-shadow: 2px 2px 15px 3px #00000007;
@@ -62,10 +63,17 @@ hr {
 }
 
 #search-section #search-inputs-div #custom-select #custom-select-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 0.8rem;
   padding: 15px 25px;
   background-color: white;
   border-radius: 5px;
+  color: gray;
 }
 
 #search-section #search-inputs-div #custom-select #custom-select-dropdown {
@@ -99,6 +107,10 @@ hr {
 
 #search-section #search-inputs-div #custom-select #custom-select-dropdown div:hover {
   background-color: rgba(145, 145, 145, 0.329);
+}
+
+.data-label {
+  font-weight: bold;
 }
 
 #results-section {

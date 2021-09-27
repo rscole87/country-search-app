@@ -29,6 +29,7 @@ hr {
       }
 
       input {
+        font-family: 'Helvetica', FontAwesome, sans-serif;
         border-radius: 5px;
         border: hidden;
         box-shadow: 2px 2px 15px 3px #00000007;
@@ -46,10 +47,13 @@ hr {
       cursor: pointer;
 
       #custom-select-header {
+        display: flex;
+        justify-content: space-between;
         font-size: 0.8rem;
         padding: 15px 25px;
         background-color: white;
         border-radius: 5px;
+        color: gray;
       }
 
       #custom-select-dropdown {
@@ -77,6 +81,10 @@ hr {
       }
     }
   }
+}
+
+.data-label{
+  font-weight: bold;
 }
 
 #results-section {

@@ -34,7 +34,7 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
         <div className="container">
           <div>
             <Link to="/">
-              <button className="back-bttn" onClick={() => setActiveCountry(null)}>Back</button>
+              <button className="back-bttn" onClick={() => setActiveCountry(null)}><i className="fa fa-long-arrow-left" />{` `} Back</button>
             </Link>
           </div>
 
@@ -81,7 +81,7 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
               </div>
 
               <div className="profile-neighbor-div">
-                <p>Border Countries: </p>
+                <p> <span className="data-label">Border Countries: </span></p>
                 <ul>{neighborLinks}</ul>
               </div>
             </div>
