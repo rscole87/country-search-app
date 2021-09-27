@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import Neighbors from './NeighborsComponent';
-import GoogleMap from './MapComponent';
-
+import Neighbors from "./NeighborsComponent";
+import { Wrapper } from "@googlemaps/react-wrapper";
+import GoogleMap from "./MapComponent";
 
 const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
   console.log(country);
@@ -15,7 +15,7 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
   }
 
   const languages = country.languages.map((language) => language.name).join(", ");
- 
+
   return (
     <>
       <section id="country-profile-section">
@@ -76,12 +76,16 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
                   {" "}
                   <span className="data-label">Border Countries: </span>
                 </p>
-                <ul><Neighbors country={country} resultsList={resultsList} setActiveCountry={setActiveCountry}/></ul>
+                <ul>
+                  <Neighbors country={country} resultsList={resultsList} setActiveCountry={setActiveCountry} />
+                </ul>
               </div>
             </div>
           </div>
+          <Wrapper apiKey={"AIzaSyCJUPwoQ07_aX5pwgy6DyeAIrthZ3FdY_s"}>
+            <GoogleMap country={country} />
+          </Wrapper>
         </div>
-        {/* <GoogleMap country={country} /> */}
       </section>
     </>
   );

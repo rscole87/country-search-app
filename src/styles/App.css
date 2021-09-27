@@ -251,7 +251,7 @@ hr {
 
 #country-profile-section .profile-content .profile-flag-div img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #country-profile-section .profile-content .profile-text-div {
@@ -318,5 +318,10 @@ hr {
 #country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a li {
   list-style: none;
   font-size: 0.7rem;
+}
+
+#country-profile-section #map {
+  height: 40vh;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=App.css.map */

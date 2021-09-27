@@ -1,31 +1,28 @@
-import React, {useEffect} from "react";
-import { Loader } from "@googlemaps/js-api-loader";
+import React, { useEffect, useRef } from "react";
 
-const GoogleMap = ({country}) => {
-    const loader = new Loader({
-        apiKey: "AIzaSyCJUPwoQ07_aX5pwgy6DyeAIrthZ3FdY_s",
-        version: "weekly",
-        libraries: []
+const GoogleMap = ({ country }) => {
+  const ref = useRef();
+
+  useEffect(() => {
+    if (country.latlng) {
+      return new window.google.maps.Map(ref.current, {
+        center: {
+          lat: country.latlng[0] ? country.latlng[0] : 38,
+          lng: country.latlng[1] ? country.latlng[1] : -97,
+        },
+        zoom: 6,
       });
-    
-      let map = <div id="map" />;
-      let mapOptions = {
-        center: { lat: country.latlng[0], lng: country.latlng[1] },
-        zoom: 8,
-      };
-    
-    
-      loader.load()
-      .then((google) => {
-        new google.maps.Map(map, mapOptions);
+    } 
+    return new window.google.maps.Map(ref.current, {
+        center: {
+          lat: 38,
+          lng: -97,
+        },
+        zoom: 2,
       })
-      .catch(err => {
-        console.log(err)
-      });
+  });
 
-    return (
-        {map}
-    )
-}
+  return <div ref={ref} id="map" />;
+};
 
 export default GoogleMap;
