@@ -7,6 +7,7 @@ hr {
   height: 3px;
   background-color: rgba(185, 185, 185, 0.329);
   border: none;
+  margin: 20px 0 0 0;
 }
 
 #search-section {
@@ -182,5 +183,128 @@ hr {
 #results-section #results-display-div .country-card:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+#country-profile-section {
+  background-color: whitesmoke;
+  padding: 5vh 0;
+}
+
+#country-profile-section .back-bttn {
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 10px 35px;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 7px 3px #00000017;
+          box-shadow: 2px 2px 7px 3px #00000017;
+  border: hidden;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+#country-profile-section .back-bttn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #00000017;
+}
+
+#country-profile-section .profile-content {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+@media only screen and (max-width: 575px) {
+  #country-profile-section .profile-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+  }
+}
+
+#country-profile-section .profile-content .profile-flag-div {
+  width: 50%;
+}
+
+@media only screen and (max-width: 575px) {
+  #country-profile-section .profile-content .profile-flag-div {
+    width: 100%;
+  }
+}
+
+#country-profile-section .profile-content .profile-flag-div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#country-profile-section .profile-content .profile-text-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+@media only screen and (max-width: 575px) {
+  #country-profile-section .profile-content .profile-text-div {
+    width: 100%;
+  }
+}
+
+#country-profile-section .profile-content .profile-text-div .profile-stats-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+
+@media only screen and (max-width: 575px) {
+  #country-profile-section .profile-content .profile-text-div .profile-stats-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0px;
+  }
+}
+
+#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+}
+
+#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a:hover {
+  background-color: #00000017;
+}
+
+#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a li {
+  list-style: none;
+  font-size: 0.7rem;
 }
 /*# sourceMappingURL=App.css.map */
