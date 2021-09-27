@@ -1,40 +1,31 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
+import Neighbors from './NeighborsComponent';
+import GoogleMap from './MapComponent';
+
 
 const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
   console.log(country);
 
-  const neighbors = resultsList.filter((result) => {
-    if (country.borders) {
-      return country.borders.includes(result.alpha3Code);
-    }
-    return;
-  });
-  const neighborLinks = neighbors.map((neighbor) => {
-    return (
-      <Link to={`/countries/${neighbor.alpha3Code}`} onClick={() => setActiveCountry(neighbor)} key={neighbor.alpha3Code}>
-        <li>{neighbor.name}</li>
-      </Link>
-    );
-  });
-  
   let currencies;
-
-  if (country.currencies){
+  if (country.currencies) {
     currencies = country.currencies.map((currency) => currency.name).join(", ");
   } else {
-    currencies = ["None"]
+    currencies = ["None"];
   }
 
   const languages = country.languages.map((language) => language.name).join(", ");
-
+ 
   return (
     <>
       <section id="country-profile-section">
         <div className="container">
           <div>
             <Link to="/">
-              <button className="back-bttn" onClick={() => setActiveCountry(null)}><i className="fa fa-long-arrow-left" />{` `} Back</button>
+              <button className="back-bttn" onClick={() => setActiveCountry(null)}>
+                <i className="fa fa-long-arrow-left" />
+                {` `} Back
+              </button>
             </Link>
           </div>
 
@@ -81,12 +72,16 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
               </div>
 
               <div className="profile-neighbor-div">
-                <p> <span className="data-label">Border Countries: </span></p>
-                <ul>{neighborLinks}</ul>
+                <p>
+                  {" "}
+                  <span className="data-label">Border Countries: </span>
+                </p>
+                <ul><Neighbors country={country} resultsList={resultsList} setActiveCountry={setActiveCountry}/></ul>
               </div>
             </div>
           </div>
         </div>
+        {/* <GoogleMap country={country} /> */}
       </section>
     </>
   );
