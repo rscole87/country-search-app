@@ -31,7 +31,7 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
 
           <div className="profile-content">
             <div className="profile-flag-div">
-              <img src={country.flags[1]} alt={`${country.name} Flag`} />
+              <img src={country.flag} alt={`${country.name} Flag`} />
             </div>
 
             <div className="profile-text-div">

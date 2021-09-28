@@ -11,7 +11,7 @@ const CountryCard = ({country, setActiveCountry}) => {
             setActiveCountry(country);
           }}
         >
-          <div className="flag-div-sm" style={{ backgroundImage: `url(${country.flags[0]})`, backgroundPosition: "center", backgroundSize: "cover" }} />
+          <div className="flag-div-sm" style={{ backgroundImage: `url(${country.flag})`, backgroundPosition: "center", backgroundSize: "cover" }} />
 
           <div className="card-content-div">
             <h3 className="country-card-heading">{country.name}</h3>
