@@ -19,7 +19,7 @@ const CountryCard = ({country, setActiveCountry}) => {
               <span className="data-label">Population:</span> {country.population}
             </p>
             <p>
-              <span className="data-label">Region:</span> {country.continent}
+              <span className="data-label">Region:</span> {country.region}
             </p>
             <p>
               <span className="data-label">Capital:</span> {country.capital}

@@ -48,10 +48,10 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
                     <span className="data-label">Population: </span> {country.population}
                   </p>
                   <p>
-                    <span className="data-label">Region: </span> {country.continent}
+                    <span className="data-label">Region: </span> {country.region}
                   </p>
                   <p>
-                    <span className="data-label">Sub Region: </span> {country.region}
+                    <span className="data-label">Sub Region: </span> {country.subregion}
                   </p>
                   <p>
                     <span className="data-label">Capital: </span> {country.capital}
