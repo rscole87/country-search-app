@@ -255,7 +255,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
 
 @media only screen and (max-width: 575px) {
@@ -282,7 +282,7 @@ hr {
 }
 
 #country-profile-section .profile-content .profile-map-div {
-  width: 50%;
+  width: 70%;
 }
 
 @media only screen and (max-width: 575px) {

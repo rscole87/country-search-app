@@ -7,15 +7,6 @@ import GoogleMap from "./MapComponent";
 const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
   console.log(country);
 
-  let currencies;
-  if (country.currencies) {
-    currencies = country.currencies.map((currency) => currency.name).join(", ");
-  } else {
-    currencies = ["None"];
-  }
-
-  // const languages = country.languages.map((language) => language.name).join(", ");
-
   return (
     <>
       <section id="country-profile-section">
