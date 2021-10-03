@@ -49,7 +49,7 @@ hr {
 }
 
 #search-section #search-inputs-div #search-box-div input {
-  font-family: 'Helvetica', FontAwesome, sans-serif;
+  font-family: "Helvetica", FontAwesome, sans-serif;
   border-radius: 5px;
   border: hidden;
   -webkit-box-shadow: 2px 2px 15px 3px #00000007;
@@ -247,21 +247,6 @@ hr {
   }
 }
 
-#country-profile-section .profile-content .profile-flag-div {
-  width: 50%;
-}
-
-@media only screen and (max-width: 575px) {
-  #country-profile-section .profile-content .profile-flag-div {
-    width: 100%;
-  }
-}
-
-#country-profile-section .profile-content .profile-flag-div img {
-  width: 100%;
-  border-radius: 5px;
-}
-
 #country-profile-section .profile-content .profile-text-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,40 +281,18 @@ hr {
   }
 }
 
-#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 8px;
-  padding: 0;
+#country-profile-section .profile-content .profile-map-div {
+  width: 50%;
 }
 
-#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a {
-  text-decoration: none;
-  color: black;
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 5px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
+@media only screen and (max-width: 575px) {
+  #country-profile-section .profile-content .profile-map-div {
+    width: 100%;
+  }
 }
 
-#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a:hover {
-  background-color: #00000017;
-}
-
-#country-profile-section .profile-content .profile-text-div .profile-neighbor-div ul a li {
-  list-style: none;
-  font-size: 0.7rem;
-}
-
-#country-profile-section #map {
-  height: 40vh;
+#country-profile-section .profile-content .profile-map-div #map {
+  height: 50vh;
   border-radius: 5px;
 }
 /*# sourceMappingURL=App.css.map */

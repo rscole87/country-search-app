@@ -3,16 +3,15 @@
   margin: 0 auto;
 }
 
-#header-section{
-  h1{
+#header-section {
+  h1 {
     margin: 5vh 0 0 0;
   }
-  
-  h5{
+
+  h5 {
     margin: 0 0 25px 0;
   }
 }
-
 
 hr {
   height: 3px;
@@ -40,7 +39,7 @@ hr {
       }
 
       input {
-        font-family: 'Helvetica', FontAwesome, sans-serif;
+        font-family: "Helvetica", FontAwesome, sans-serif;
         border-radius: 5px;
         border: hidden;
         box-shadow: 2px 2px 15px 3px #00000007;
@@ -94,7 +93,7 @@ hr {
   }
 }
 
-.data-label{
+.data-label {
   font-weight: bold;
 }
 
@@ -166,7 +165,7 @@ hr {
 #country-profile-section {
   background-color: rgb(245, 245, 245);
   padding: 5vh 0;
-    
+
   .back-bttn {
     cursor: pointer;
     font-size: 0.8rem;
@@ -177,7 +176,7 @@ hr {
     border-radius: 5px;
     transition: 300ms;
 
-    &:hover{
+    &:hover {
       box-shadow: none;
       background-color: #00000017;
     }
@@ -191,19 +190,6 @@ hr {
     @media only screen and (max-width: 575px) {
       flex-direction: column;
       gap: 25px;
-    }
-
-    .profile-flag-div {
-      width: 50%;
-
-      @media only screen and (max-width: 575px) {
-        width: 100%;
-      }
-
-      img {
-        width: 100%;
-        border-radius: 5px;
-      }
     }
 
     .profile-text-div {
@@ -224,39 +210,19 @@ hr {
           gap: 0px;
         }
       }
+    }
 
-      .profile-neighbor-div {
-        ul {
-          display: flex;
-          justify-content: space-evenly;
-          flex-wrap: wrap;
-          gap: 8px;
-          padding: 0;
+    .profile-map-div{
+      width: 50%;
 
-          a{
-            text-decoration: none;
-            color: black;
-            border: 1px solid black;
-            border-radius: 3px;
-            padding: 5px;
-            transition: 300ms;
+      @media only screen and (max-width: 575px) {
+        width: 100%;
+      }
 
-            &:hover{
-              background-color: #00000017;
-            }
-
-            li {
-              list-style: none;
-              font-size: 0.7rem;
-            }
-          }
-        }
+      #map {
+        height: 50vh;
+        border-radius: 5px;
       }
     }
-  }
-
-  #map{
-      height: 40vh;
-      border-radius: 5px;
   }
 }

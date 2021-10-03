@@ -30,10 +30,6 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
           </div>
 
           <div className="profile-content">
-            <div className="profile-flag-div">
-              
-            </div>
-
             <div className="profile-text-div">
               <div className="profile-header-div">
                 <h2>{country.name}</h2>
@@ -44,25 +40,24 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
                   <p>
                     <span className="data-label">Region: </span> {country.region}
                   </p>
-                 
+
                   <p>
                     <span className="data-label">Capital: </span> {country.capital}
                   </p>
-                </div>
 
-                <div>
                   <p>
                     <span className="data-label">Top Level Domain: </span> {country.topLevelDomain[0]}
                   </p>
-                  
                 </div>
               </div>
+            </div>
 
+            <div className="profile-map-div">
+              <Wrapper apiKey={"AIzaSyCJUPwoQ07_aX5pwgy6DyeAIrthZ3FdY_s"}>
+                <GoogleMap country={country} />
+              </Wrapper>
             </div>
           </div>
-          <Wrapper apiKey={"AIzaSyCJUPwoQ07_aX5pwgy6DyeAIrthZ3FdY_s"}>
-            <GoogleMap country={country} />
-          </Wrapper>
         </div>
       </section>
     </>
