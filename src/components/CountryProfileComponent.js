@@ -14,7 +14,7 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
     currencies = ["None"];
   }
 
-  const languages = country.languages.map((language) => language.name).join(", ");
+  // const languages = country.languages.map((language) => language.name).join(", ");
 
   return (
     <>
@@ -31,7 +31,7 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
 
           <div className="profile-content">
             <div className="profile-flag-div">
-              <img src={country.flag} alt={`${country.name} Flag`} />
+              
             </div>
 
             <div className="profile-text-div">
@@ -42,17 +42,9 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
               <div className="profile-stats-div">
                 <div>
                   <p>
-                    <span className="data-label">Native Name: </span> {country.nativeName}
-                  </p>
-                  <p>
-                    <span className="data-label">Population: </span> {country.population}
-                  </p>
-                  <p>
                     <span className="data-label">Region: </span> {country.region}
                   </p>
-                  <p>
-                    <span className="data-label">Sub Region: </span> {country.subregion}
-                  </p>
+                 
                   <p>
                     <span className="data-label">Capital: </span> {country.capital}
                   </p>
@@ -62,24 +54,10 @@ const CountryProfile = ({ country, setActiveCountry, resultsList }) => {
                   <p>
                     <span className="data-label">Top Level Domain: </span> {country.topLevelDomain[0]}
                   </p>
-                  <p>
-                    <span className="data-label">Currencies: </span> {currencies}
-                  </p>
-                  <p>
-                    <span className="data-label">Languages: </span> {languages}
-                  </p>
+                  
                 </div>
               </div>
 
-              <div className="profile-neighbor-div">
-                <p>
-                  {" "}
-                  <span className="data-label">Border Countries: </span>
-                </p>
-                <ul>
-                  <Neighbors country={country} resultsList={resultsList} setActiveCountry={setActiveCountry} />
-                </ul>
-              </div>
             </div>
           </div>
           <Wrapper apiKey={"AIzaSyCJUPwoQ07_aX5pwgy6DyeAIrthZ3FdY_s"}>

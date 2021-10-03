@@ -9,11 +9,13 @@ const Main = () => {
   const [regionFilter, setRegionFilter] = useState("All");
   const [resultsList, setResultsList] = useState([]);
   const [activeCountry, setActiveCountry] = useState(null);
+  const API_KEY = '9efaa6cf6d8ca50bbad1c400a5309e99'
 
   useEffect(() => {
-    fetch("https://restcountries.com/v2/all")
+    fetch(`http://api.countrylayer.com/v2/all?access_key=${API_KEY}`)
       .then((results) => results.json())
       .then((results) => {
+        console.log(results)
         setResultsList(results);
       })
       .catch((err) => console.log(`Error occured: ${err}`));

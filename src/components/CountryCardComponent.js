@@ -11,13 +11,11 @@ const CountryCard = ({country, setActiveCountry}) => {
             setActiveCountry(country);
           }}
         >
-          <div className="flag-div-sm" style={{ backgroundImage: `url(${country.flag})`, backgroundPosition: "center", backgroundSize: "cover" }} />
+          <div className="flag-div-sm" />
 
           <div className="card-content-div">
             <h3 className="country-card-heading">{country.name}</h3>
-            <p>
-              <span className="data-label">Population:</span> {country.population}
-            </p>
+            
             <p>
               <span className="data-label">Region:</span> {country.region}
             </p>
